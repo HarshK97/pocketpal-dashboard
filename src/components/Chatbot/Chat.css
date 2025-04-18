@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+.MessageWrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 4px 8px;
+}
+
+.MessageWrapper[data-role="user"] {
+  align-self: flex-end;
+  color: blue;
+  margin-right: 0;
+}
+
+.MessageWrapper[data-role="assistant"] {
+  align-self: flex-start;
+  color: gray;
+}
+
+.Message {
+  border-radius: 16px;
+  padding: 12px 18px;
+  max-width: 80%;
+  width: auto;
+  margin: 4px 0;
+  word-wrap: break-word;
+  white-space: normal;
+  min-width: min-content;
+  background-color: #f1f1f1;
+  color: #000000;
+}
+
+.MessageWrapper[data-role="user"] .Message {
+  background-color: #d1e8ff;
+  text-align: right;
+  margin-left: auto;
+}
+
+.MessageWrapper[data-role="assistant"] .Message {
+  background-color: #f1f1f1;
+  text-align: left;
+}
+
+.MessageWrapper[data-role="user"] > div:first-child {
+  width: 100%;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.MessageWrapper[data-role="assistant"] > div:first-child {
+  width: 100%;
+  text-align: left;
+}

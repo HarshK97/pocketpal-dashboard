@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.Svg {
+  fill: white !important;
+}
